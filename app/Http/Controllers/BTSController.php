@@ -7,7 +7,7 @@ use Illuminate\Http\Request; // Lets us handle HTTP requests
 class BTSController extends Controller
 {
     // Main page function
-    public function index()
+    public function quotes()
     {
         // Array of BTS members
         $members = array(
@@ -34,7 +34,7 @@ class BTSController extends Controller
         );
 
         // Send data to Blade view 'bts.blade.php'
-        return view('bts', compact('members', 'quotes'));
+        return view('quotes', compact('members', 'quotes'));
     }
 
     public function rm() {

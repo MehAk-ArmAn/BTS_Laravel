@@ -13,8 +13,8 @@
             <img src="{{ asset('imgs/v.jfif') }}" alt="RM">
             <h1>V</h1>
             <p>Real Name: Kim Taehyung</p>
-            <p>Role: ...</p>
-            <p class="quote">"... 💜"</p>
+            <p>Role: Vocalist</p>
+            <p class="quote">"Never give up 💜"</p>
         </div>
 
     </body>

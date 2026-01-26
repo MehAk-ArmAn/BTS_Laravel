@@ -13,8 +13,8 @@
             <img src="{{ asset('imgs/jhope.jfif') }}" alt="RM">
             <h1>Jhope</h1>
             <p>Real Name: Jung Hoseok</p>
-            <p>Role: ...</p>
-            <p class="quote">"... 💜"</p>
+            <p>Role: Rapper, Dancer</p>
+            <p class="quote">"Smile, even if it hurts 💜"</p>
         </div>
 
     </body>

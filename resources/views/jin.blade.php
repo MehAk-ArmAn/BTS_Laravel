@@ -13,8 +13,8 @@
             <img src="{{ asset('imgs/jin.jfif') }}" alt="RM">
             <h1>Jin</h1>
             <p>Real Name: Kim Seokjin</p>
-            <p>Role: ...</p>
-            <p class="quote">"... 💜"</p>
+            <p>Role: Vocalist, Visual</p>
+            <p class="quote">"Love yourself 💜"</p>
         </div>
 
     </body>

@@ -13,8 +13,8 @@
             <img src="{{ asset('imgs/jk.jfif') }}" alt="RM">
             <h1>Jk</h1>
             <p>Real Name: Jeon Jungkook</p>
-            <p>Role: ...</p>
-            <p class="quote">"... 💜"</p>
+            <p>Role: Vocalist, Dancer</p>
+            <p class="quote">"Dream big, keep going 💜"</p>
         </div>
 
     </body>

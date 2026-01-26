@@ -8,7 +8,7 @@ Route::get('/', function () {
 
 use App\Http\Controllers\BTSController;
 
-Route::get('/quotes', [BTSController::class, 'index']);
+Route::get('/quotes', [BTSController::class, 'quotes']);
 
 //all the members
 Route::get('/KimNamjoon', [BTSController::class, 'rm']);
