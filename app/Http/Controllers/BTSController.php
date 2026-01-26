@@ -6,7 +6,7 @@ use Illuminate\Http\Request; // Lets us handle HTTP requests
 
 class BTSController extends Controller
 {
-    // Main page function
+    // quotes page
     public function quotes()
     {
         // Array of BTS members
@@ -37,36 +37,41 @@ class BTSController extends Controller
         return view('quotes', compact('members', 'quotes'));
     }
 
+    // memebers pages
     public function rm() {
         return view('rm');
     }
-
     public function jin() {
         return view('jin');
     }
-
     public function suga() {
         return view('suga');
     }
-
     public function jhope() {
         return view('jhope');
     }
-
     public function jimin() {
         return view('jimin');
     }
-
     public function v() {
         return view('v');
     }
-
     public function jk() {
         return view('jk');
     }
-
     public function bt21() {
         return view('bt21');
     }
+
+    // voting page
+    public function showVoteForm() {
+        return view('vote');
+    }
+    public function handleVote(Request $request) {
+        // Get the value sent from the input field named "member"
+        $member = $request->input('member');
+        return "You voted for $member 💜🤞🏻✨!";
+    }
+
 
 }

@@ -1,14 +1,15 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\GalleryController;
+use App\Http\Controllers\BTSController;
 
+// welcome home/default page
 Route::get('/', function () {
     return view('welcome');
 });
 
-use App\Http\Controllers\BTSController;
-
-Route::get('/quotes', [BTSController::class, 'quotes']);
+Route::get('/quotes', [BTSController::class, 'quotes']); // quotes page
 
 //all the members
 Route::get('/KimNamjoon', [BTSController::class, 'rm']);
@@ -19,3 +20,10 @@ Route::get('/ParkJimin', [BTSController::class, 'jimin']);
 Route::get('/KimTaehyung', [BTSController::class, 'v']);
 Route::get('/JeonJungkook', [BTSController::class, 'jk']);
 Route::get('/Bt21', [BTSController::class, 'bt21']);
+
+// meme gallery page
+Route::get('/gallery', [GalleryController::class, 'index']);
+
+//voting page 
+Route::get('/vote', [BTSController::class, 'showVoteForm']);
+Route::post('/vote', [BTSController::class, 'handleVote']);

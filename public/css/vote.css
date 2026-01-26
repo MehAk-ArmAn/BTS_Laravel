@@ -1,0 +1,34 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #000000; /* deep dark purple/navy vibe */
+    color: #e0d7ff; /* light lavender for text */
+    text-align: center;
+    padding: 100px;
+}
+
+h1 {
+    color: #bb86fc; /* main purple heading */
+    background-color: rgba(255, 255, 255, 0.185);
+    padding: 45px;
+    text-shadow: 2px 2px #3c096c; /* dark purple shadow for vibe */
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+form {
+    margin-top: 67px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.input {
+    font-size: 20px;
+    padding: 14px;
+}
+
+.btn {
+    font-size: 30px;
+    padding: 12px 24px;
+    cursor: pointer;
+}
