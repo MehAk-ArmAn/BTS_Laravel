@@ -11,14 +11,9 @@ Route::get('/', function () {
 
 Route::get('/quotes', [BTSController::class, 'quotes']); // quotes page
 
-//all the members
-Route::get('/KimNamjoon', [BTSController::class, 'rm']);
-Route::get('/KimSeokjin', [BTSController::class, 'jin']);
-Route::get('/MinYoongi', [BTSController::class, 'suga']);
-Route::get('/JungHoseok', [BTSController::class, 'jhope']);
-Route::get('/ParkJimin', [BTSController::class, 'jimin']);
-Route::get('/KimTaehyung', [BTSController::class, 'v']);
-Route::get('/JeonJungkook', [BTSController::class, 'jk']);
+// Dynamic member route
+Route::get('/member/{name}', [BTSController::class, 'memberPage']);
+
 Route::get('/Bt21', [BTSController::class, 'bt21']);
 
 // meme gallery page

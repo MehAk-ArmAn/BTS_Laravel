@@ -4,8 +4,15 @@ namespace App\Http\Controllers; // Folder location of this controller
 
 use Illuminate\Http\Request; // Lets us handle HTTP requests
 
+use App\Models\Member; // Lets us use the Member model to add/fetch members from the DB
+
 class BTSController extends Controller
 {
+    public function memberPage($name) {
+        $member = Member::where('name', $name)->firstOrFail(); // pull from DB
+        return view('member', compact('member'));
+    }
+
     // quotes page
     public function quotes()
     {
@@ -37,28 +44,6 @@ class BTSController extends Controller
         return view('quotes', compact('members', 'quotes'));
     }
 
-    // memebers pages
-    public function rm() {
-        return view('rm');
-    }
-    public function jin() {
-        return view('jin');
-    }
-    public function suga() {
-        return view('suga');
-    }
-    public function jhope() {
-        return view('jhope');
-    }
-    public function jimin() {
-        return view('jimin');
-    }
-    public function v() {
-        return view('v');
-    }
-    public function jk() {
-        return view('jk');
-    }
     public function bt21() {
         return view('bt21');
     }
