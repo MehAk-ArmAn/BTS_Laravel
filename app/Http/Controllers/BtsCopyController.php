@@ -18,6 +18,7 @@ class BtsCopyController extends Controller
     // Saves form data into DB
     public function store(Request $request)
     {
+
         // 1) VALIDATE INPUTS
         // If validation fails, Laravel automatically sends user back
         // and fills $errors in Blade file.
