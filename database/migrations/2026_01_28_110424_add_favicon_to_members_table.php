@@ -4,19 +4,22 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-return new class extends Migration
-{
+return new class extends Migration {
     public function up(): void
     {
         Schema::table('members', function (Blueprint $table) {
-            $table->string('favicon')->nullable();
+            if (!Schema::hasColumn('members', 'favicon')) {
+                $table->string('favicon')->nullable();
+            }
         });
     }
 
     public function down(): void
     {
         Schema::table('members', function (Blueprint $table) {
-            $table->dropColumn('favicon');
+            if (Schema::hasColumn('members', 'favicon')) {
+                $table->dropColumn('favicon');
+            }
         });
     }
 };

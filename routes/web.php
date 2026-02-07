@@ -19,11 +19,24 @@ Route::get('/Bt21', [BTSController::class, 'bt21']);
 // meme gallery page
 Route::get('/gallery', [GalleryController::class, 'index']);
 
-//voting page 
+//voting page
 Route::get('/vote', [BTSController::class, 'showVoteForm']);
 Route::post('/vote', [BTSController::class, 'handleVote']);
 
-// 0t7 image path 
+// 0t7 image path
 Route::get('/bts', function () {
     return response()->file(public_path('extra_gallery/_BTS_.jfif'));
 });
+
+// bts copy generator controller
+use App\Http\Controllers\BtsCopyController;
+
+// GET request: show the form page
+Route::get('/bts_copies/create', [BtsCopyController::class, 'create'])
+    ->name('bts_copies.create');
+// POST request: handle form submission and save to DB
+Route::post('/bts_copies', [BtsCopyController::class, 'store'])
+    ->name('bts_copies.store');
+// (Optional) GET /bts_copies to show list page
+Route::get('/bts_copies', [BtsCopyController::class, 'index'])
+    ->name('bts_copies.index');
