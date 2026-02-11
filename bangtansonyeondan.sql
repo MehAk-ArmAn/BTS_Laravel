@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 07, 2026 at 09:16 PM
+-- Generation Time: Feb 11, 2026 at 08:45 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -42,13 +42,8 @@ CREATE TABLE `bts_copies` (
 --
 
 INSERT INTO `bts_copies` (`id`, `bts_name`, `copy_extra_name`, `copy_title`, `description`, `created_at`, `updated_at`) VALUES
-(6, 'Kim Taehyung', 'V', 'Kim Taehyung no.1', 'The main visual', '2026-02-07 13:45:33', '2026-02-07 13:45:33'),
-(7, 'Kim Namjoon', 'Jooni', 'Kim Namjoon Rap monster', 'The ultimate rapping boss 😎', '2026-02-07 15:17:23', '2026-02-07 15:17:23'),
-(8, 'Kim Seokjin', 'Mr. World Wide Handsome', 'Kim Seokjin Jin', 'Our World Wide Handsome fake maknae', '2026-02-07 15:20:19', '2026-02-07 15:20:19'),
-(9, 'Min Yoongi', 'Professional roaster', 'Min Yoongi', 'Min Yoongi can\'t be copied, he\'s the one and only', '2026-02-07 15:34:52', '2026-02-07 15:34:52'),
-(10, 'Park Jimin', 'My SHYLAAAAAAAA', 'Park Jimin Shylaaa', 'The famous trend', '2026-02-07 15:47:27', '2026-02-07 15:47:27'),
-(11, 'Jung Hoseok', 'Hobi', 'Jung Hoseok Kill\'in it', 'Hobi\'s the best dancer !!!', '2026-02-07 16:02:16', '2026-02-07 16:02:16'),
-(12, 'Jeon Jungkook', 'Jkkk', 'Jeon Jungkook\'s copy', 'Jkkkkkkkkkkkkkkkkkkkkkkkkkk', '2026-02-07 16:03:03', '2026-02-07 16:03:03');
+(1, 'Park Jimin', 'My SHYLAAAAAAAA', 'Park Jimin Shylaaa', 'My SHYLAAAAAAAAAAAAAAAAAAA JIMNAAAAAAAAAAAA', '2026-02-10 02:56:55', '2026-02-10 02:56:55'),
+(2, 'Kim Seokjin', 'Mr. World Wide Handsome', 'Kim Seokjin Jin', 'No one can ever be better than our fake maknae', '2026-02-10 02:57:41', '2026-02-10 02:57:41');
 
 -- --------------------------------------------------------
 
@@ -98,54 +93,151 @@ CREATE TABLE `failed_jobs` (
 
 CREATE TABLE `gallery_images` (
   `id` int(11) NOT NULL,
-  `filename` varchar(255) NOT NULL
+  `name` varchar(255) DEFAULT NULL,
+  `img_path` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `gallery_images`
 --
 
-INSERT INTO `gallery_images` (`id`, `filename`) VALUES
-(1, 'jin.jfif'),
-(2, 'jk.jfif'),
-(3, 'Jkk.jfif'),
-(4, 'suga.jfif'),
-(5, 'jimin.jfif'),
-(6, 'hobi.jfif'),
-(7, 'tae.jfif'),
-(8, 'v.jfif'),
-(9, 'absolutecinama.jfif'),
-(10, 'beautiful.jfif'),
-(11, 'bossbaby.jfif'),
-(12, 'btsmacbeth.jfif'),
-(13, 'btsnewyork.jfif'),
-(14, 'absoluteciname2.jfif'),
-(15, 'BTSSSS.jfif'),
-(16, 'cinbts.jfif'),
-(17, 'grinding.jfif'),
-(18, 'eggJin.jfif'),
-(19, 'HAHAHA.jfif'),
-(20, 'huh.jfif'),
-(21, 'sugaspider.jfif'),
-(22, 'stobit.jfif'),
-(23, 'smile.jfif'),
-(24, 'skincare.jfif'),
-(25, 'run.jfif'),
-(26, 'runrunrun.jfif'),
-(27, 'peace.jfif'),
-(28, 'ooooo.jfif'),
-(29, 'niagarapopo.jfif'),
-(30, 'lifeGoesOn.jfif'),
-(31, 'lalala.jfif'),
-(32, 'idcc.jfif'),
-(33, 'idc.jfif'),
-(34, 'tae.jfif'),
-(35, 'taekook.jfif'),
-(36, 'WHAT.jfif'),
-(37, 'jiminSmile.jfif'),
-(38, 'tae.jfif'),
-(39, 'jinnnn.jfif'),
-(40, 'jinSmile.jfif');
+INSERT INTO `gallery_images` (`id`, `name`, `img_path`) VALUES
+(1, 'absoluteciname2', 'extra_gallery/absoluteciname2.jfif'),
+(2, 'BTS', 'extra_gallery/BTS.jfif'),
+(3, 'bossbaby', 'extra_gallery/bossbaby.jfif'),
+(4, 'beautiful', 'extra_gallery/beautiful.jfif'),
+(5, 'btsnewyork', 'extra_gallery/btsnewyork.jfif'),
+(6, 'btsmacbeth', 'extra_gallery/btsmacbeth.jfif'),
+(7, 'btsss', 'extra_gallery/btsss.jfif'),
+(8, 'BTSSSS', 'extra_gallery/BTSSSS.jfif'),
+(9, 'cinbts', 'extra_gallery/cinbts.jfif'),
+(10, 'download (2)', 'extra_gallery/download (2).jfif'),
+(11, 'eggJin', 'extra_gallery/eggJin.jfif'),
+(12, 'fairy', 'extra_gallery/fairy.jfif'),
+(13, 'grinding', 'extra_gallery/grinding.jfif'),
+(14, 'HAHAHA', 'extra_gallery/HAHAHA.jfif'),
+(15, 'hobi', 'extra_gallery/hobi.jfif'),
+(16, 'huh', 'extra_gallery/huh.jfif'),
+(17, 'idc', 'extra_gallery/idc.jfif'),
+(18, 'idcc', 'extra_gallery/idcc.jfif'),
+(19, 'idk', 'extra_gallery/idk.jfif'),
+(20, 'jimin', 'extra_gallery/jimin.jfif'),
+(21, 'jiminaaa', 'extra_gallery/jiminaaa.jfif'),
+(22, 'jiminSmile', 'extra_gallery/jiminSmile.jfif'),
+(23, 'jin', 'extra_gallery/jin.jfif'),
+(24, 'jinnnn', 'extra_gallery/jinnnn.jfif'),
+(25, 'jinSmile', 'extra_gallery/jinSmile.jfif'),
+(26, 'jk', 'extra_gallery/jk.jfif'),
+(27, 'Jkk', 'extra_gallery/Jkk.jfif'),
+(28, 'jkkkk', 'extra_gallery/jkkkk.jfif'),
+(29, 'lalala', 'extra_gallery/lalala.jfif'),
+(30, 'lifeGoesOn', 'extra_gallery/lifeGoesOn.jfif'),
+(31, 'niagarapopo', 'extra_gallery/niagarapopo.jfif'),
+(32, 'ooooo', 'extra_gallery/ooooo.jfif'),
+(33, 'peace', 'extra_gallery/peace.jfif'),
+(34, 'princess_v', 'extra_gallery/princess_v.jfif'),
+(35, 'run', 'extra_gallery/run.jfif'),
+(36, 'runrunrun', 'extra_gallery/runrunrun.jfif'),
+(37, 'skincare', 'extra_gallery/skincare.jfif'),
+(38, 'smile', 'extra_gallery/smile.jfif'),
+(39, 'stobit', 'extra_gallery/stobit.jfif'),
+(40, 'suga', 'extra_gallery/suga.jfif'),
+(41, 'sugaspider', 'extra_gallery/sugaspider.jfif'),
+(42, 'tae', 'extra_gallery/tae.jfif'),
+(43, 'taekook', 'extra_gallery/taekook.jfif'),
+(44, 'v', 'extra_gallery/v.jfif'),
+(45, 'WHAT', 'extra_gallery/WHAT.jfif'),
+(46, 'absoluteciname2', 'extra_gallery/absoluteciname2.jfif'),
+(47, 'BTS', 'extra_gallery/BTS.jfif'),
+(48, 'bossbaby', 'extra_gallery/bossbaby.jfif'),
+(49, 'bossbaby', 'extra_galley/bssbaby.jfif'),
+(50, 'beautiful', 'extra_gallery/beautiful.jfif'),
+(51, 'btsnewyork', 'extra_gallery/btsnewyork.jfif'),
+(52, 'btsmacbeth', 'extra_gallery/btsmacbeth.jfif'),
+(53, 'btsss', 'extra_gallery/btsss.jfif'),
+(54, 'BTSSSS', 'extra_gallery/BTSSSS.jfif'),
+(55, 'cinbts', 'extra_gallery/cinbts.jfif'),
+(56, 'download (2)', 'extra_gallery/download (2).jfif'),
+(57, 'eggJin', 'extra_gallery/eggJin.jfif'),
+(58, 'fairy', 'extra_gallery/fairy.jfif'),
+(59, 'grinding', 'extra_gallery/grinding.jfif'),
+(60, 'HAHAHA', 'extra_gallery/HAHAHA.jfif'),
+(61, 'hobi', 'extra_gallery/hobi.jfif'),
+(62, 'huh', 'extra_gallery/huh.jfif'),
+(63, 'idc', 'extra_gallery/idc.jfif'),
+(64, 'idcc', 'extra_gallery/idcc.jfif'),
+(65, 'idk', 'extra_gallery/idk.jfif'),
+(66, 'jimin', 'extra_gallery/jimin.jfif'),
+(67, 'jiminaaa', 'extra_gallery/jiminaaa.jfif'),
+(68, 'jiminSmile', 'extra_gallery/jiminSmile.jfif'),
+(69, 'jin', 'extra_gallery/jin.jfif'),
+(70, 'jinnnn', 'extra_gallery/jinnnn.jfif'),
+(71, 'jinSmile', 'extra_gallery/jinSmile.jfif'),
+(72, 'jk', 'extra_gallery/jk.jfif'),
+(73, 'Jkk', 'extra_gallery/Jkk.jfif'),
+(74, 'jkkkk', 'extra_gallery/jkkkk.jfif'),
+(75, 'lalala', 'extra_gallery/lalala.jfif'),
+(76, 'lifeGoesOn', 'extra_gallery/lifeGoesOn.jfif'),
+(77, 'niagarapopo', 'extra_gallery/niagarapopo.jfif'),
+(78, 'ooooo', 'extra_gallery/ooooo.jfif'),
+(79, 'peace', 'extra_gallery/peace.jfif'),
+(80, 'princess_v', 'extra_gallery/princess_v.jfif'),
+(81, 'run', 'extra_gallery/run.jfif'),
+(82, 'runrunrun', 'extra_gallery/runrunrun.jfif'),
+(83, 'skincare', 'extra_gallery/skincare.jfif'),
+(84, 'smile', 'extra_gallery/smile.jfif'),
+(85, 'stobit', 'extra_gallery/stobit.jfif'),
+(86, 'suga', 'extra_gallery/suga.jfif'),
+(87, 'sugaspider', 'extra_gallery/sugaspider.jfif'),
+(88, 'tae', 'extra_gallery/tae.jfif'),
+(89, 'taekook', 'extra_gallery/taekook.jfif'),
+(90, 'v', 'extra_gallery/v.jfif'),
+(91, 'WHAT', 'extra_gallery/WHAT.jfif'),
+(92, 'absoluteciname2', 'extra_gallery/absoluteciname2.jfif'),
+(93, 'BTS', 'extra_gallery/BTS.jfif'),
+(94, 'bossbaby', 'extra_gallery/bossbaby.jfif'),
+(95, 'beautiful', 'extra_gallery/beautiful.jfif'),
+(96, 'btsnewyork', 'extra_gallery/btsnewyork.jfif'),
+(97, 'btsmacbeth', 'extra_gallery/btsmacbeth.jfif'),
+(98, 'btsss', 'extra_gallery/btsss.jfif'),
+(99, 'BTSSSS', 'extra_gallery/BTSSSS.jfif'),
+(100, 'cinbts', 'extra_gallery/cinbts.jfif'),
+(101, 'download (2)', 'extra_gallery/download (2).jfif'),
+(102, 'eggJin', 'extra_gallery/eggJin.jfif'),
+(103, 'fairy', 'extra_gallery/fairy.jfif'),
+(104, 'grinding', 'extra_gallery/grinding.jfif'),
+(105, 'HAHAHA', 'extra_gallery/HAHAHA.jfif'),
+(106, 'hobi', 'extra_gallery/hobi.jfif'),
+(107, 'huh', 'extra_gallery/huh.jfif'),
+(108, 'idc', 'extra_gallery/idc.jfif'),
+(109, 'idcc', 'extra_gallery/idcc.jfif'),
+(110, 'idk', 'extra_gallery/idk.jfif'),
+(111, 'jimin', 'extra_gallery/jimin.jfif'),
+(112, 'jiminaaa', 'extra_gallery/jiminaaa.jfif'),
+(113, 'jiminSmile', 'extra_gallery/jiminSmile.jfif'),
+(114, 'jin', 'extra_gallery/jin.jfif'),
+(115, 'jinnnn', 'extra_gallery/jinnnn.jfif'),
+(116, 'jinSmile', 'extra_gallery/jinSmile.jfif'),
+(117, 'jk', 'extra_gallery/jk.jfif'),
+(118, 'Jkk', 'extra_gallery/Jkk.jfif'),
+(119, 'jkkkk', 'extra_gallery/jkkkk.jfif'),
+(120, 'lalala', 'extra_gallery/lalala.jfif'),
+(121, 'lifeGoesOn', 'extra_gallery/lifeGoesOn.jfif'),
+(122, 'niagarapopo', 'extra_gallery/niagarapopo.jfif'),
+(123, 'ooooo', 'extra_gallery/ooooo.jfif'),
+(124, 'peace', 'extra_gallery/peace.jfif'),
+(125, 'princess_v', 'extra_gallery/princess_v.jfif'),
+(126, 'run', 'extra_gallery/run.jfif'),
+(127, 'runrunrun', 'extra_gallery/runrunrun.jfif'),
+(128, 'skincare', 'extra_gallery/skincare.jfif'),
+(129, 'smile', 'extra_gallery/smile.jfif'),
+(130, 'stobit', 'extra_gallery/stobit.jfif'),
+(131, 'suga', 'extra_gallery/suga.jfif'),
+(132, 'sugaspider', 'extra_gallery/sugaspider.jfif'),
+(133, 'tae', 'extra_gallery/tae.jfif'),
+(134, 'taekook', 'extra_gallery/taekook.jfif'),
+(135, 'v', 'extra_gallery/v.jfif'),
+(136, 'WHAT', 'extra_gallery/WHAT.jfif');
 
 -- --------------------------------------------------------
 
@@ -205,13 +297,13 @@ CREATE TABLE `members` (
 --
 
 INSERT INTO `members` (`id`, `name`, `role`, `image`, `quote`, `nickname`, `created_at`, `updated_at`, `favicon`) VALUES
-(1, 'KimNamjoon', 'Leader / Rapper', 'rm.jfif', 'Life is tough, but so are you 💜', 'Rm', '2026-01-28 07:20:16', '2026-01-28 07:20:16', 'KOYA.png'),
-(2, 'KimSeokjin', 'Vocal', 'jin.jfif', 'Love yourself 💜', 'Jin', '2026-01-28 07:20:16', '2026-01-28 07:20:16', 'RJ.png'),
-(3, 'MinYoongi', 'Rapper', 'suga.jfif', 'Effort never betrays you 💜', 'Suga', '2026-01-28 07:20:16', '2026-01-28 07:20:16', 'SHOOKY.png'),
-(4, 'JungHoseok', 'Dancer / Rapper', 'jhope.jfif', 'Smile, even if it hurts 💜', 'J-hope', '2026-01-28 07:20:16', '2026-01-28 07:20:16', 'MANG.png'),
-(5, 'ParkJimin', 'Vocal / Dancer', 'jimin.jfif', 'Do it with passion or not at all 💜', 'Jimin', '2026-01-28 07:20:16', '2026-01-28 07:20:16', 'CHIMMY.png'),
-(6, 'KimTaehyung', 'Vocal', 'v.jfif', 'Never give up 💜', 'V', '2026-01-28 07:20:16', '2026-01-28 07:20:16', 'TATA.png'),
-(7, 'JeonJungkook', 'Main Vocal / Dancer', 'jk.jfif', 'Dream big, keep going 💜', 'Jk', '2026-01-28 07:20:16', '2026-01-28 07:20:16', 'COOKY.png');
+(1, 'KimNamjoon', 'Leader / Rapper', 'rm.jfif', 'Life is tough, but so are you 💜', 'Rm', '2026-02-10 02:54:40', '2026-02-10 02:54:40', 'KOYA.png'),
+(2, 'KimSeokjin', 'Vocal', 'jin.jfif', 'Love yourself 💜', 'Jin', '2026-02-10 02:54:42', '2026-02-10 02:54:42', 'RJ.png'),
+(3, 'MinYoongi', 'Rapper', 'suga.jfif', 'Effort never betrays you 💜', 'Suga', '2026-02-10 02:54:42', '2026-02-10 02:54:42', 'SHOOKY.png'),
+(4, 'JungHoseok', 'Dancer / Rapper', 'jhope.jfif', 'Smile, even if it hurts 💜', 'J-hope', '2026-02-10 02:54:42', '2026-02-10 02:54:42', 'MANG.png'),
+(5, 'ParkJimin', 'Vocal / Dancer', 'jimin.jfif', 'Do it with passion or not at all 💜', 'Jimin', '2026-02-10 02:54:42', '2026-02-10 02:54:42', 'CHIMMY.png'),
+(6, 'KimTaehyung', 'Vocal', 'v.jfif', 'Never give up 💜', 'V', '2026-02-10 02:54:43', '2026-02-10 02:54:43', 'TATA.png'),
+(7, 'JeonJungkook', 'Main Vocal / Dancer', 'jk.jfif', 'Dream big, keep going 💜', 'Jk', '2026-02-10 02:54:43', '2026-02-10 02:54:43', 'COOKY.png');
 
 -- --------------------------------------------------------
 
@@ -233,10 +325,9 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (1, '0001_01_01_000000_create_users_table', 1),
 (2, '0001_01_01_000001_create_cache_table', 1),
 (3, '0001_01_01_000002_create_jobs_table', 1),
-(4, '2026_01_28_104910_create_members_table', 2),
-(5, '2026_01_28_105321_add_favicon_to_members_table', 3),
-(6, '2026_01_28_110424_add_favicon_to_members_table', 4),
-(7, '2026_02_07_131748_create_bts_copies_table', 5);
+(4, '2026_01_28_104910_create_members_table', 1),
+(5, '2026_01_28_110424_add_favicon_to_members_table', 1),
+(6, '2026_02_07_131748_create_bts_copies_table', 1);
 
 -- --------------------------------------------------------
 
@@ -270,7 +361,8 @@ CREATE TABLE `sessions` (
 --
 
 INSERT INTO `sessions` (`id`, `user_id`, `ip_address`, `user_agent`, `payload`, `last_activity`) VALUES
-('xlpXnv95JxmecWpWehWoxfOpyhnY1eG5OqEuDfQS', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiQUJyVzZaemxINmRWakhnbGxXVlU2eU50d0hRQlJHUUZTcXk5Y292OCI7czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6MzI6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9idHNfY29waWVzIjtzOjU6InJvdXRlIjtzOjE2OiJidHNfY29waWVzLmluZGV4Ijt9czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ==', 1770494588);
+('e10Ed5mu4wznoMfyb1R7EvEXIPNrohDv598h90AV', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiVUtzR3p4QlNja1NvbUdzUEVmUDBuNVFvcTExbFU4NzltMVpLQzRtRCI7czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6MzI6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9KdW5nSG9zZW9rIjtzOjU6InJvdXRlIjtOO31zOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX19', 1770711271),
+('wY0OLoO59WplqcY1KPFcqjloszARSy0LKDUExM5W', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiUEVKSDMzTHlKcTdaM1l1SU9aeXpqOHRIN0ZUcWxROXJVSHdwS3NiZCI7czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6MjE6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMCI7czo1OiJyb3V0ZSI7Tjt9czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ==', 1770795561);
 
 -- --------------------------------------------------------
 
@@ -381,7 +473,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `bts_copies`
 --
 ALTER TABLE `bts_copies`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `failed_jobs`
@@ -393,7 +485,7 @@ ALTER TABLE `failed_jobs`
 -- AUTO_INCREMENT for table `gallery_images`
 --
 ALTER TABLE `gallery_images`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=137;
 
 --
 -- AUTO_INCREMENT for table `jobs`
@@ -411,7 +503,7 @@ ALTER TABLE `members`
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `users`
