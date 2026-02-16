@@ -7,6 +7,10 @@
         <link rel="shortcut icon" href="{{ asset('favicons/logo.png') }}" type="image/x-icon">
     </head>
     <body>
+
+            <!-- Navbar -->
+        @include('partials.navbar')
+        
         <h1>BTS Meme Gallery 💜😂</h1>
         <div class="gallery">
             @foreach($pics as $pic)
@@ -17,11 +21,5 @@
 
         </div>
 
-        <!-- Hidden navbar -->
-        @include('partials.secret-navbar')
-        <!-- Link CSS -->
-    <link rel="stylesheet" href="{{ asset('css/secret-navbar.css') }}">
-        <!-- JS -->
-        <script src="{{ asset('js/bts.js') }}"></script>
     </body>
 </html>

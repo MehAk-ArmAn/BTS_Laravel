@@ -36,5 +36,10 @@ Route::post('/bts_copies', [BtsCopyController::class, 'store'])
 Route::get('/bts_copies', [BtsCopyController::class, 'index'])
     ->name('bts_copies.index');
 
+// BTS Achievements & Awards page
+Route::get('/bts-achievements', function () {
+    return view('bts-achievements');
+});
+
 // Dynamic member route
-Route::get('/{name}', [BTSController::class, 'memberPage']);
+Route::get('/{name}', [BTSController::class, 'memberPage']); // keep it at the end

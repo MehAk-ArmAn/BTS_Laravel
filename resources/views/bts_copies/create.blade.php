@@ -7,6 +7,10 @@
     <link rel="shortcut icon" href="{{ asset('favicons/logo.png') }}" type="image/x-icon">
 </head>
 <body>
+
+        <!-- Navbar -->
+        @include('partials.navbar')
+        
     <div class="container">
         <h2>🧩 BTS Copies Creator</h2>
 
@@ -31,13 +35,9 @@
             <label>BTS Member *</label>
             <select name="bts_name" required>
                 <option value="">⋆✦✧⋆ Select BTS Member ⋆✦✧⋆</option>
-                <option value="Kim Namjoon">⋆✦✧⋆ Kim Namjoon ⋆✦✧⋆</option>
-                <option value="Kim Seokjin">⋆✦✧⋆ Kim Seokjin ⋆✦✧⋆</option>
-                <option value="Min Yoongi">⋆✦✧⋆ Min Yoongi ⋆✦✧⋆</option>
-                <option value="Jung Hoseok">⋆✦✧⋆ Jung Hoseok ⋆✦✧⋆</option>
-                <option value="Park Jimin">⋆✦✧⋆ Park Jimin ⋆✦✧⋆</option>
-                <option value="Kim Taehyung">⋆✦✧⋆ Kim Taehyung ⋆✦✧⋆</option>
-                <option value="Jeon Jungkook">⋆✦✧⋆ Jeon Jungkook ⋆✦✧⋆</option>
+                @foreach($members as $name)  
+                    <option value="{{ $name }}">⋆✦✧⋆ {{ $name }} ⋆✦✧⋆</option>
+                @endforeach
             </select>
             <br>
             <br>
@@ -60,11 +60,5 @@
             <button type="submit">Save Copy ✅</button>
         </form>
     </div>
-    <!-- Hidden navbar -->
-    @include('partials.secret-navbar')
-    <!-- Link CSS -->
-    <link rel="stylesheet" href="{{ asset('css/secret-navbar.css') }}">
-    <!-- JS -->
-    <script src="{{ asset('js/bts.js') }}"></script>
 </body>
 </html>

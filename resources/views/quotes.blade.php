@@ -8,6 +8,10 @@
         <link rel="shortcut icon" href="{{ asset('favicons/logo.png') }}" type="image/x-icon">
     </head>
     <body>
+
+        <!-- Navbar -->
+        @include('partials.navbar')
+        
         <h1>BTS Quotes 💜</h1> <!-- Main title -->
 
         <div class="body">
@@ -19,11 +23,6 @@
                 </div>
             @endfor
         </div>
-        <!-- Hidden navbar -->
-        @include('partials.secret-navbar')
-        <!-- Link CSS -->
-    <link rel="stylesheet" href="{{ asset('css/secret-navbar.css') }}">
-        <!-- JS -->
-        <script src="{{ asset('js/bts.js') }}"></script>
+        
     </body>
 </html>

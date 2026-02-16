@@ -9,6 +9,9 @@
     </head>
     <body>
 
+        <!-- Navbar -->
+        @include('partials.navbar')
+        
         <h1>Vote for your Bias 💜</h1>
 
         <form action="/vote" method="POST">
@@ -27,12 +30,5 @@
             <button class="btn" type="submit">Vote 🎉</button> <!-- to submit the vote -->
         </form>
 
-
-        <!-- Hidden navbar -->
-        @include('partials.secret-navbar')
-        <!-- Link CSS -->
-    <link rel="stylesheet" href="{{ asset('css/secret-navbar.css') }}">
-        <!-- JS -->
-        <script src="{{ asset('js/bts.js') }}"></script>
     </body>
 </html>

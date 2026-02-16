@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\BtsCopy;  // Model that talks to the DB table
 use Illuminate\Http\Request;  // Used to read form inputs
 use Illuminate\Validation\Rule;
+use Illuminate\Support\Str; // optional, for string checks
 
 class BtsCopyController extends Controller
 {
@@ -30,8 +31,12 @@ class BtsCopyController extends Controller
                 'required',
                 'string',
                 'max:255',
-                Rule::unique('bts_copies')
-                    ->where('bts_name', $request->bts_name),
+                Rule::unique('bts_copies')->where('bts_name', $request->bts_name),
+                function($attribute, $value, $fail) use ($request) {
+                    if (!Str::contains($value, $request->bts_name)) {
+                        $fail("😤 The title must include the selected BTS member ({$request->bts_name}).");
+                    }
+                },
             ],
             'description' => ['nullable', 'string', 'max:5000'],
         ], [
@@ -48,7 +53,7 @@ class BtsCopyController extends Controller
         return redirect()
             ->route('bts_copies.create')
             ->with('success', '✅ BTS Copy saved successfully!');
-    }
+    }   
 
     // (Optional) Shows list of all saved copies
     public function index()

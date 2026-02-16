@@ -3,11 +3,20 @@ body {
     background-color: #000000; /* deep dark purple/navy vibe */
     color: #e0d7ff; /* light lavender for text */
     text-align: center;
+
+    background-image: linear-gradient(rgb(0, 0, 0), rgba(0, 0, 0, 0)),
+                    url('../imgs/background.jpeg'); /* Background img, styling stuff */
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .body {
     background-color: rgba(255, 255, 255, 0.062);
     margin-bottom: 30px;
+}
+
+background-image {
+    opacity: 0.5;
 }
 
 h1 {

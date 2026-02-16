@@ -8,13 +8,11 @@
     <link rel="shortcut icon" href="{{ asset('imgs/bts-0t7_aesthetic_icon.png') }}" type="image/x-icon">
 </head>
 <body>
+
+        <!-- Navbar -->
+        @include('partials.navbar')
+        
     <h1>BTS</h1>
 
-    <!-- Hidden navbar -->
-        @include('partials.secret-navbar')
-        <!-- Link CSS -->
-    <link rel="stylesheet" href="{{ asset('css/secret-navbar.css') }}">
-        <!-- JS -->
-        <script src="{{ asset('js/bts.js') }}"></script>
 </body>
 </html>

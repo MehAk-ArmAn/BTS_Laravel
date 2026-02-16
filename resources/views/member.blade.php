@@ -7,6 +7,10 @@
 
     </head>
     <body>
+
+        <!-- Navbar -->
+        @include('partials.navbar')
+        
         <div class="card">
             <img src="{{ asset('imgs/' . $member->image) }}" alt="{{ $member->name }}">
             <h1>{{ $member->nickname }}</h1>
@@ -14,11 +18,6 @@
             <p>{{ $member->role }}</p>
             <p>{{ $member->quote }}</p>
         </div>
-        <!-- Hidden navbar -->
-        @include('partials.secret-navbar')
-        <!-- Link CSS -->
-    <link rel="stylesheet" href="{{ asset('css/secret-navbar.css') }}">
-        <!-- JS -->
-        <script src="{{ asset('js/bts.js') }}"></script>
+
     </body>
 </html>

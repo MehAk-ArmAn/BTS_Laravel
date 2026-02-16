@@ -7,6 +7,10 @@
     <link rel="shortcut icon" href="{{ asset('favicons/logo.png') }}" type="image/x-icon">
 </head>
 <body>
+
+        <!-- Navbar -->
+        @include('partials.navbar')
+        
     <div class="container">
         <h2>📚 BTS Copies</h2>
 
@@ -39,11 +43,5 @@
         </tbody>
         </table>
     </div>
-    <!-- Hidden navbar -->
-    @include('partials.secret-navbar')
-    <!-- Link CSS -->
-    <link rel="stylesheet" href="{{ asset('css/secret-navbar.css') }}">
-    <!-- JS -->
-    <script src="{{ asset('js/bts.js') }}"></script>
 </body>
 </html>
