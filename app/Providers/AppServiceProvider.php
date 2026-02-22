@@ -35,5 +35,7 @@ class AppServiceProvider extends ServiceProvider
         // the global array of all members
         View::share('members', [$members['Rm'], $members['Jin'], $members['Suga'], $members['J-hope'], $members['Jimin'], $members['V'], $members['Jk']]);
 
+        
+
     }
 }

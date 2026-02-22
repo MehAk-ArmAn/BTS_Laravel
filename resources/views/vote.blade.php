@@ -19,13 +19,13 @@
 <!-- Laravel uses "CSRF" tokens to make sure POST requests come from trusted forms and not external malicious sites. -->
             <select name="member" class="input" required>
                 <!-- name is used to send this input’s value to the server -->
-                <option value="🎤 Rap Monster">Kim Namjoon</option>
-                <option value="😼 Suga">Min Yoongi</option>
-                <option value="😀 Jiminaaaa">Park Jimin</option>
-                <option value="😎World Wide Handsome Jin">Kim Seokjin</option>
-                <option value="🕺🏻 Hobi">Jung Hoseuk</option>
-                <option value="✌🏻 V">Kim Taehyung</option>
-                <option value="💀 Jk">Jeon Jungkook</option>
+                <option value="🎤 Rap Monster">⋆✦✧⋆ {{ $RM }} ⋆✦✧⋆</option>
+                <option value="😼 Suga">⋆✦✧⋆ {{ $Suga }} ⋆✦✧⋆</option>
+                <option value="😀 Jiminaaaa">⋆✦✧⋆ {{ $Jimin }} ⋆✦✧⋆</option>
+                <option value="😎World Wide Handsome Jin">⋆✦✧⋆ {{ $Jin }} ⋆✦✧⋆</option>
+                <option value="🕺🏻 Hobi">⋆✦✧⋆ {{ $JHope }} ⋆✦✧⋆</option>
+                <option value="✌🏻 V">⋆✦✧⋆ {{ $V }} ⋆✦✧⋆</option>
+                <option value="💀 Jk">⋆✦✧⋆ {{ $Jk }} ⋆✦✧⋆</option>
             </select>
             <button class="btn" type="submit">Vote 🎉</button> <!-- to submit the vote -->
         </form>

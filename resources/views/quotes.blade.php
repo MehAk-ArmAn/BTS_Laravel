@@ -16,12 +16,12 @@
 
         <div class="body">
             <!-- Loop through members -->
-            @for ($i = 0; $i < count($members); $i++)
+            @foreach($quotes as $quote)
                 <div class="member">
-                    <span>{{ $members[$i] }}</span> <!-- Member name -->
-                    <p>“{{ $quotes[$i] }}”</p> <!-- Quote/lyrics -->
+                    <span>{{ $quote->source }}</span>
+                    <p>“{{ $quote->quote }}”</p>
                 </div>
-            @endfor
+            @endforeach
         </div>
         
     </body>

@@ -9,7 +9,6 @@
     <a href="/gallery">Gallery</a>
     <a href="/vote">Vote</a>
     <a href="/bts_copies">BTS Copies</a>
-    <a href="/bts_copies/create">Create Copy</a>
     <a href="/Kim Namjoon">RM</a>
     <a href="/Kim Seokjin">Jin</a>
     <a href="/Min Yoongi">Suga</a>

@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\BtsCopy;  // Model that talks to the DB table
 use Illuminate\Http\Request;  // Used to read form inputs
-use Illuminate\Validation\Rule;
+use Illuminate\Validation\Rule; // allows custom stuff validation "rules" like Rule::unique('bts_copies')->where(...)
 use Illuminate\Support\Str; // optional, for string checks
 
 class BtsCopyController extends Controller
@@ -31,7 +31,7 @@ class BtsCopyController extends Controller
                 'required',
                 'string',
                 'max:255',
-                Rule::unique('bts_copies')->where('bts_name', $request->bts_name),
+                Rule::unique('bts_copies')->where('bts_name', $request->bts_name), // checks DB for duplicates PER MEMBER
                 function($attribute, $value, $fail) use ($request) {
                     if (!Str::contains($value, $request->bts_name)) {
                         $fail("😤 The title must include the selected BTS member ({$request->bts_name}).");
@@ -63,6 +63,56 @@ class BtsCopyController extends Controller
 
         // Send $copies to view as a variable
         return view('bts_copies.index', compact('copies'));
+    }
+
+    // Show edit form
+    public function edit($id)
+    {
+        $copy = BtsCopy::findOrFail($id); // find copy or 404
+
+        return view('bts_copies.edit', compact('copy')); // send to edit view
+    }
+
+    // Update existing copy
+    public function update(Request $request, $id)
+    {
+        $copy = BtsCopy::findOrFail($id); // get record
+
+        $validated = $request->validate([
+            'bts_name' => ['required', 'string', 'max:255'],
+            'copy_extra_name' => ['nullable', 'string', 'max:255'],
+            'copy_title' => [
+                'required',
+                'string',
+                'max:255',
+                Rule::unique('bts_copies')
+                    ->where('bts_name', $request->bts_name)
+                    ->ignore($copy->id), // ignore current record
+                function($attribute, $value, $fail) use ($request) {
+                    if (!Str::contains($value, $request->bts_name)) {
+                        $fail("Title must include {$request->bts_name}");
+                    }
+                },
+            ],
+            'description' => ['nullable', 'string', 'max:5000'],
+        ]);
+
+        $copy->update($validated); // update DB
+
+        return redirect()
+            ->route('bts_copies.index')
+            ->with('success', 'Copy updated successfully!');
+    }
+
+    // Delete a copy
+    public function destroy($id)
+    {
+        $copy = BtsCopy::findOrFail($id); // find record
+        $copy->delete(); // remove from DB
+
+        return redirect()
+            ->route('bts_copies.index')
+            ->with('success', 'Copy deleted successfully!');
     }
 
 }

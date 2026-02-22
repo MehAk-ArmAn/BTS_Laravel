@@ -26,15 +26,8 @@ Route::get('/bts', function () {
 // bts copy generator controller
 use App\Http\Controllers\BtsCopyController;
 
-// GET request: show the form page
-Route::get('/bts_copies/create', [BtsCopyController::class, 'create'])
-    ->name('bts_copies.create');
-// POST request: handle form submission and save to DB
-Route::post('/bts_copies', [BtsCopyController::class, 'store'])
-    ->name('bts_copies.store');
-// (Optional) GET /bts_copies to show list page
-Route::get('/bts_copies', [BtsCopyController::class, 'index'])
-    ->name('bts_copies.index');
+// Creates full CRUD routes (index, create, store, edit, update, destroy) automatically
+Route::resource('bts_copies', BtsCopyController::class);
 
 // BTS Achievements & Awards page
 Route::get('/bts-achievements', function () {

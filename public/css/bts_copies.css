@@ -19,6 +19,16 @@ input, textarea {
     margin-bottom:14px;
 }
 
+.edit_link {
+    margin-left: 25px;
+}
+
+.delete_btn {
+    border-radius: 10px;
+    margin: auto 25px;
+    background-color: rgba(222, 222, 222, 0.705);
+}
+
 label {
     font-weight:bold;
 }
@@ -60,7 +70,9 @@ table {
 }
 
 th,td {
-    border:1px solid #dddddd6e; padding:10px; text-align:left;
+    border:1px solid #dddddd6e; 
+    padding:10px; 
+    text-align:left;
 }
 
 th {
