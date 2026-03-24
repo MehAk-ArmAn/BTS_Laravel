@@ -30,5 +30,8 @@
             <button class="btn" type="submit">Vote 🎉</button> <!-- to submit the vote -->
         </form>
 
+        <!-- Footer -->
+        @include('partials.footer')
+        
     </body>
 </html>

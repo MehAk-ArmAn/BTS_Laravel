@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 11, 2026 at 08:45 AM
+-- Generation Time: Mar 24, 2026 at 05:52 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -43,47 +43,11 @@ CREATE TABLE `bts_copies` (
 
 INSERT INTO `bts_copies` (`id`, `bts_name`, `copy_extra_name`, `copy_title`, `description`, `created_at`, `updated_at`) VALUES
 (1, 'Park Jimin', 'My SHYLAAAAAAAA', 'Park Jimin Shylaaa', 'My SHYLAAAAAAAAAAAAAAAAAAA JIMNAAAAAAAAAAAA', '2026-02-10 02:56:55', '2026-02-10 02:56:55'),
-(2, 'Kim Seokjin', 'Mr. World Wide Handsome', 'Kim Seokjin Jin', 'No one can ever be better than our fake maknae', '2026-02-10 02:57:41', '2026-02-10 02:57:41');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `cache`
---
-
-CREATE TABLE `cache` (
-  `key` varchar(255) NOT NULL,
-  `value` mediumtext NOT NULL,
-  `expiration` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `cache_locks`
---
-
-CREATE TABLE `cache_locks` (
-  `key` varchar(255) NOT NULL,
-  `owner` varchar(255) NOT NULL,
-  `expiration` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `failed_jobs`
---
-
-CREATE TABLE `failed_jobs` (
-  `id` bigint(20) UNSIGNED NOT NULL,
-  `uuid` varchar(255) NOT NULL,
-  `connection` text NOT NULL,
-  `queue` text NOT NULL,
-  `payload` longtext NOT NULL,
-  `exception` longtext NOT NULL,
-  `failed_at` timestamp NOT NULL DEFAULT current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+(2, 'Kim Seokjin', 'Mr. World Wide Handsome', 'Kim Seokjin Jin', 'No one can ever be better than our fake maknae', '2026-02-10 02:57:41', '2026-02-10 02:57:41'),
+(9, 'Kim Namjoon', 'RM', 'Kim Namjoon Rap monster', NULL, '2026-02-16 03:02:51', '2026-02-22 16:15:54'),
+(10, 'Jung Hoseok', 'Hobi', 'Jung Hoseok Kill\'in it', 'asedrtyuiovdfyugik', '2026-02-22 07:31:11', '2026-02-22 07:31:11'),
+(11, 'Min Yoongi', 'Mr.EMO', 'Min Yoongi - Sleeping', 'Don\'t talk to meee', '2026-02-22 16:17:55', '2026-02-22 16:17:55'),
+(12, 'Kim Taehyung', 'V', 'Kim Taehyung no.1', 'V', '2026-02-22 17:04:57', '2026-02-22 17:04:57');
 
 -- --------------------------------------------------------
 
@@ -242,41 +206,6 @@ INSERT INTO `gallery_images` (`id`, `name`, `img_path`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `jobs`
---
-
-CREATE TABLE `jobs` (
-  `id` bigint(20) UNSIGNED NOT NULL,
-  `queue` varchar(255) NOT NULL,
-  `payload` longtext NOT NULL,
-  `attempts` tinyint(3) UNSIGNED NOT NULL,
-  `reserved_at` int(10) UNSIGNED DEFAULT NULL,
-  `available_at` int(10) UNSIGNED NOT NULL,
-  `created_at` int(10) UNSIGNED NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `job_batches`
---
-
-CREATE TABLE `job_batches` (
-  `id` varchar(255) NOT NULL,
-  `name` varchar(255) NOT NULL,
-  `total_jobs` int(11) NOT NULL,
-  `pending_jobs` int(11) NOT NULL,
-  `failed_jobs` int(11) NOT NULL,
-  `failed_job_ids` longtext NOT NULL,
-  `options` mediumtext DEFAULT NULL,
-  `cancelled_at` int(11) DEFAULT NULL,
-  `created_at` int(11) NOT NULL,
-  `finished_at` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `members`
 --
 
@@ -297,13 +226,13 @@ CREATE TABLE `members` (
 --
 
 INSERT INTO `members` (`id`, `name`, `role`, `image`, `quote`, `nickname`, `created_at`, `updated_at`, `favicon`) VALUES
-(1, 'KimNamjoon', 'Leader / Rapper', 'rm.jfif', 'Life is tough, but so are you 💜', 'Rm', '2026-02-10 02:54:40', '2026-02-10 02:54:40', 'KOYA.png'),
-(2, 'KimSeokjin', 'Vocal', 'jin.jfif', 'Love yourself 💜', 'Jin', '2026-02-10 02:54:42', '2026-02-10 02:54:42', 'RJ.png'),
-(3, 'MinYoongi', 'Rapper', 'suga.jfif', 'Effort never betrays you 💜', 'Suga', '2026-02-10 02:54:42', '2026-02-10 02:54:42', 'SHOOKY.png'),
-(4, 'JungHoseok', 'Dancer / Rapper', 'jhope.jfif', 'Smile, even if it hurts 💜', 'J-hope', '2026-02-10 02:54:42', '2026-02-10 02:54:42', 'MANG.png'),
-(5, 'ParkJimin', 'Vocal / Dancer', 'jimin.jfif', 'Do it with passion or not at all 💜', 'Jimin', '2026-02-10 02:54:42', '2026-02-10 02:54:42', 'CHIMMY.png'),
-(6, 'KimTaehyung', 'Vocal', 'v.jfif', 'Never give up 💜', 'V', '2026-02-10 02:54:43', '2026-02-10 02:54:43', 'TATA.png'),
-(7, 'JeonJungkook', 'Main Vocal / Dancer', 'jk.jfif', 'Dream big, keep going 💜', 'Jk', '2026-02-10 02:54:43', '2026-02-10 02:54:43', 'COOKY.png');
+(1, 'Kim Namjoon', 'Leader / Rapper', 'rm.jfif', 'Life is tough, but so are you 💜', 'Rm', '2026-02-10 02:54:40', '2026-02-10 02:54:40', 'KOYA.png'),
+(2, 'Kim Seokjin', 'Vocal', 'jin.jfif', 'Love yourself 💜', 'Jin', '2026-02-10 02:54:42', '2026-02-10 02:54:42', 'RJ.png'),
+(3, 'Min Yoongi', 'Rapper', 'suga.jfif', 'Effort never betrays you 💜', 'Suga', '2026-02-10 02:54:42', '2026-02-10 02:54:42', 'SHOOKY.png'),
+(4, 'Jung Hoseok', 'Dancer / Rapper', 'jhope.jfif', 'Smile, even if it hurts 💜', 'J-hope', '2026-02-10 02:54:42', '2026-02-10 02:54:42', 'MANG.png'),
+(5, 'Park Jimin', 'Vocal / Dancer', 'jimin.jfif', 'Do it with passion or not at all 💜', 'Jimin', '2026-02-10 02:54:42', '2026-02-10 02:54:42', 'CHIMMY.png'),
+(6, 'Kim Taehyung', 'Vocal', 'v.jfif', 'Never give up 💜', 'V', '2026-02-10 02:54:43', '2026-02-10 02:54:43', 'TATA.png'),
+(7, 'Jeon Jungkook', 'Main Vocal / Dancer', 'jk.jfif', 'Dream big, keep going 💜', 'Jk', '2026-02-10 02:54:43', '2026-02-10 02:54:43', 'COOKY.png');
 
 -- --------------------------------------------------------
 
@@ -327,7 +256,9 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (3, '0001_01_01_000002_create_jobs_table', 1),
 (4, '2026_01_28_104910_create_members_table', 1),
 (5, '2026_01_28_110424_add_favicon_to_members_table', 1),
-(6, '2026_02_07_131748_create_bts_copies_table', 1);
+(6, '2026_02_07_131748_create_bts_copies_table', 1),
+(7, '2026_02_17_050950_create_quotes_table', 2),
+(8, '2026_03_24_163105_create_songs_images_table', 3);
 
 -- --------------------------------------------------------
 
@@ -340,6 +271,47 @@ CREATE TABLE `password_reset_tokens` (
   `token` varchar(255) NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `quotes`
+--
+
+CREATE TABLE `quotes` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `source` varchar(255) NOT NULL,
+  `quote` text NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `quotes`
+--
+
+INSERT INTO `quotes` (`id`, `source`, `quote`, `created_at`, `updated_at`) VALUES
+(1, 'RM (Kim Namjoon - UN General Assembly speech)', 'You’ve got your own voice — don’t lose it.', NULL, NULL),
+(2, 'V (Kim Taehyung)', 'Everybody wants happiness, nobody wants pain, but you can\'t have the rainbow without the rain', NULL, NULL),
+(3, 'Jin - Wings', 'Even if I fall, I still believe myself.', NULL, NULL),
+(4, 'Suga - Tomorrow', 'The dawn right before sunrise is the darkest.', NULL, NULL),
+(5, 'J-Hope', 'Hope is something you create.', NULL, NULL),
+(6, 'Jimin - Answer: Love Myself', 'I’m learning how to love myself.', NULL, NULL),
+(7, 'V (Kim taehyung)', 'Sometimes silence says everything.', NULL, NULL),
+(8, 'JungKook', 'I won’t run away anymore.', NULL, NULL),
+(9, 'RM - MIC Drop', 'Haters gon\' hate, players gon\' play, Live a life.', NULL, NULL),
+(10, 'Jungkook', 'Living without passion is like being dead.', NULL, NULL),
+(11, 'BTS - Spring Day', 'The morning will come again. No darkness or no season can last forever.', NULL, NULL),
+(12, 'Suga', 'Don’t be satisfied with your life, try harder.', NULL, NULL),
+(13, 'Jimin', 'If you can\'t fly, then run. Today we run, tomorrow we fly.', NULL, NULL),
+(14, 'IDOL (Theme: Unapologetic self-confidence)', 'You can\'t stop me lovin\' myself.', NULL, NULL),
+(15, 'Mikrokosmos (Theme: Hope in darkness)', 'The deeper the night, the brighter the starlight.', NULL, NULL),
+(16, 'Not Today', 'All the underdogs in the world, a day may come when we lose, but it is not today.', NULL, NULL),
+(17, 'RM, Do You', 'Even if you\'re not perfect, you\'re a limited edition.', NULL, NULL),
+(18, 'Run', 'Run, run, run again. It\'s okay to fall. It\'s okay to get hurt.', NULL, NULL),
+(19, 'Suga (Min Yoongi)', 'Effort makes you. You will regret someday if you don\'t do your best now.', NULL, NULL),
+(20, 'RM (Kim Namjoon)', 'Life is a soup and I\'m a fork', NULL, NULL),
+(21, 'V (Kim taehyung)', 'The secret of life is... to love what you have', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -361,8 +333,30 @@ CREATE TABLE `sessions` (
 --
 
 INSERT INTO `sessions` (`id`, `user_id`, `ip_address`, `user_agent`, `payload`, `last_activity`) VALUES
-('e10Ed5mu4wznoMfyb1R7EvEXIPNrohDv598h90AV', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiVUtzR3p4QlNja1NvbUdzUEVmUDBuNVFvcTExbFU4NzltMVpLQzRtRCI7czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6MzI6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9KdW5nSG9zZW9rIjtzOjU6InJvdXRlIjtOO31zOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX19', 1770711271),
-('wY0OLoO59WplqcY1KPFcqjloszARSy0LKDUExM5W', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiUEVKSDMzTHlKcTdaM1l1SU9aeXpqOHRIN0ZUcWxROXJVSHdwS3NiZCI7czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6MjE6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMCI7czo1OiJyb3V0ZSI7Tjt9czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ==', 1770795561);
+('7GWGq8S970CR6PVmli4072kuNH4Sf1gUmUslPPWc', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiQUg5WGtya0Fmckc4QUFBTVBFbjZwMDNBcFRzdG14ZWo0dUpUdFk0ciI7czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6Mjc6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9zb25ncyI7czo1OiJyb3V0ZSI7Tjt9czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ==', 1774371066),
+('XjH3bgF72ZSNuNYYGzx2dvEXIRqmpQJbZldszxyN', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiUU9heVNSYzl5RVJDQXl2VFIxb2h6UnZPTkNlWE9sMnRNNzF4VDV4diI7czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6MzI6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9idHNfY29waWVzIjtzOjU6InJvdXRlIjtzOjE2OiJidHNfY29waWVzLmluZGV4Ijt9czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ==', 1771798687);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `songs_images`
+--
+
+CREATE TABLE `songs_images` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `img_path` varchar(255) NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `songs_images`
+--
+
+INSERT INTO `songs_images` (`id`, `name`, `img_path`, `created_at`, `updated_at`) VALUES
+(1, 'Dynamite', 'img/songs/dynamite.jpg', NULL, NULL),
+(2, 'Butter', 'imgs/songs/3.jfif', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -393,43 +387,9 @@ ALTER TABLE `bts_copies`
   ADD UNIQUE KEY `bts_copies_bts_name_copy_title_unique` (`bts_name`,`copy_title`);
 
 --
--- Indexes for table `cache`
---
-ALTER TABLE `cache`
-  ADD PRIMARY KEY (`key`),
-  ADD KEY `cache_expiration_index` (`expiration`);
-
---
--- Indexes for table `cache_locks`
---
-ALTER TABLE `cache_locks`
-  ADD PRIMARY KEY (`key`),
-  ADD KEY `cache_locks_expiration_index` (`expiration`);
-
---
--- Indexes for table `failed_jobs`
---
-ALTER TABLE `failed_jobs`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `failed_jobs_uuid_unique` (`uuid`);
-
---
 -- Indexes for table `gallery_images`
 --
 ALTER TABLE `gallery_images`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `jobs`
---
-ALTER TABLE `jobs`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `jobs_queue_index` (`queue`);
-
---
--- Indexes for table `job_batches`
---
-ALTER TABLE `job_batches`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -451,12 +411,24 @@ ALTER TABLE `password_reset_tokens`
   ADD PRIMARY KEY (`email`);
 
 --
+-- Indexes for table `quotes`
+--
+ALTER TABLE `quotes`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `sessions`
 --
 ALTER TABLE `sessions`
   ADD PRIMARY KEY (`id`),
   ADD KEY `sessions_user_id_index` (`user_id`),
   ADD KEY `sessions_last_activity_index` (`last_activity`);
+
+--
+-- Indexes for table `songs_images`
+--
+ALTER TABLE `songs_images`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `users`
@@ -473,25 +445,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `bts_copies`
 --
 ALTER TABLE `bts_copies`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
-
---
--- AUTO_INCREMENT for table `failed_jobs`
---
-ALTER TABLE `failed_jobs`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `gallery_images`
 --
 ALTER TABLE `gallery_images`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=137;
-
---
--- AUTO_INCREMENT for table `jobs`
---
-ALTER TABLE `jobs`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `members`
@@ -503,7 +463,19 @@ ALTER TABLE `members`
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+
+--
+-- AUTO_INCREMENT for table `quotes`
+--
+ALTER TABLE `quotes`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+
+--
+-- AUTO_INCREMENT for table `songs_images`
+--
+ALTER TABLE `songs_images`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `users`

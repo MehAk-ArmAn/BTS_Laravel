@@ -60,5 +60,9 @@
                 <button type="submit">Save Copy ✅</button>
             </form>
         </div>
+
+        <!-- Footer -->
+        @include('partials.footer')
+        
     </body>
 </html>

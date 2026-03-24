@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\BTSController; // welcome home/default page
+use App\Http\Controllers\SongsController;
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -33,6 +35,9 @@ Route::resource('bts_copies', BtsCopyController::class);
 Route::get('/bts-achievements', function () {
     return view('bts-achievements');
 });
+
+// BTS songs list
+Route::get('/songs', [SongsController::class, 'index']);
 
 // Dynamic member route
 Route::get('/{name}', [BTSController::class, 'memberPage']); // keep it at the end

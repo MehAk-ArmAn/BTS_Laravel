@@ -19,5 +19,8 @@
             <p>{{ $member->quote }}</p>
         </div>
 
+        <!-- Footer -->
+        @include('partials.footer')
+        
     </body>
 </html>

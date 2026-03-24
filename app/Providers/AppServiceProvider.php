@@ -35,7 +35,14 @@ class AppServiceProvider extends ServiceProvider
         // the global array of all members
         View::share('members', [$members['Rm'], $members['Jin'], $members['Suga'], $members['J-hope'], $members['Jimin'], $members['V'], $members['Jk']]);
 
-        
+        // makes the following variables available in all .blade.php files
+        View::share('adminEmail', 'mehakarmaan1@gmail.com');
+        View::share('location', '...');
+        View::share('name', 'Mehak Arman');
+        View::share('phone', '+971 56 701 8403');
+        View::share('instagram', '#');
+        View::share('linkedIn', '#');
+        View::share('twitter', '#');
 
     }
 }

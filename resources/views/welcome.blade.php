@@ -14,5 +14,7 @@
         
     <h1>BTS</h1>
 
+    <!-- Footer -->
+        @include('partials.footer')
 </body>
 </html>

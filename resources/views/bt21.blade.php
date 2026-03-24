@@ -16,6 +16,8 @@
         
     <h1>BT21 💜</h1>
 
+    <!-- Footer -->
+        @include('partials.footer')
 </body>
 </html>
 

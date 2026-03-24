@@ -2,8 +2,8 @@
 <html>
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-        <title>⋆✦✧⋆ BTS Meme Gallery ⋆✦✧⋆</title>
-        <link rel="stylesheet" href="{{ asset('css/gallery.css') }}">
+        <title>⋆✦✧⋆ BTS SONGS ⋆✦✧⋆</title>
+        <link rel="stylesheet" href="{{ asset('css/songs.css') }}">
         <link rel="shortcut icon" href="{{ asset('favicons/logo.png') }}" type="image/x-icon">
     </head>
     <body>
@@ -11,11 +11,11 @@
             <!-- Navbar -->
         @include('partials.navbar')
         
-        <h1>BTS Meme Gallery 💜😂</h1>
-        <div class="gallery">
-            @foreach($pics as $pic)
-                <div class="pic">
-                    <img src="{{ asset($pic->img_path) }}" alt="{{ $pic->name }}">
+        <h1>BTS SONGS 💜</h1>
+        <div class="songs">
+            @foreach($songs as $song)
+                <div class="song">
+                    <img src="{{ asset($song->img_path) }}" alt="{{ $song->name }}">
                 </div>
             @endforeach
 

@@ -208,11 +208,29 @@
                     <p>BTS continues breaking records before you even blink: awards, collabs, sold-out shows, and history-making moments. Basically, they’re untouchable at this point, the standard for global music domination.</p>
                     <img src="{{ asset('/imgs/timeline/2026/1.jfif') }}" alt="BTS COMEBACK Imgage of 2026">
                     <img src="{{ asset('/imgs/timeline/2026/2.jfif') }}" alt="BTS COMEBACK Imgage of 2026">
-                    <img src="{{ asset('/imgs/timeline/2026/3.jfif') }}" alt="BTS COMEBACK Imgage of 2026">
-                    <img src="{{ asset('/imgs/timeline/2026/4.jfif') }}" alt="BTS COEMBACK Imgage of 2026">
+
+                    <h2>ARIRANG Era — Global Takeover</h2>
+                    <p>BTS returns as a full group after hiatus, and the ARIRANG era explodes worldwide. This comeback isn’t just music — it’s a cultural reset.</p>
+
+                    <ul>
+                        <li>Their new album ARIRANG earned over 110 million streams in its first day (the biggest single-day debut of 2026) and reached #1 on the Spotify Global chart.</li>
+                        <li>Billboard Hot 100 — Multiple #1 debuts from ARIRANG album</li>
+                        <li>Spotify — Record-breaking global streams in 24 hours</li>
+                        <li>YouTube — Most-viewed MV in 24 hours (new record)</li>
+                        <li>Sold-out world tour across multiple continents</li>
+                    </ul>
+
+                    <img src="{{ asset('/imgs/timeline/2026/5.jfif') }}" alt="BTS ARIRANG Era">
+                    <img src="{{ asset('/imgs/timeline/2026/6.jfif') }}" alt="BTS ARIRANG Era">
+
+                    <h2>SWIM - MV</h2>
+                    <p>Yes, the BTS song "SWIM" (released March 20, 2026, as part of the ARIRANG album) achieved massive early viewing figures, with reports indicating it hit over 3.37 million views within 19 minutes of its debut on YouTube. </p>
+
+                    <img src="{{ asset('/imgs/timeline/2026/7.jfif') }}" alt="BTS ARIRANG Era">
+                    <img src="{{ asset('/imgs/timeline/2026/8.jfif') }}" alt="BTS ARIRANG Era">
+                
                 </div>
             </div>
-
 
 
         </section>
@@ -222,5 +240,8 @@
             <p>So Much More Coming Soon...</p>
         </footer>
 
+        <!-- Footer -->
+        @include('partials.footer')
+        
     </body>
 </html>
