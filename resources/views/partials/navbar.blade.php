@@ -18,6 +18,7 @@
     <a href="/Jeon Jungkook">Jungkook</a>
     <a href="/bts">BTS Image</a>
     <a href="/bts-achievements">BTS Achievements</a>
+    <a href="/songs">BTS SONGS</a>
 </nav>
 
 <!-- JS 

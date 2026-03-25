@@ -15,7 +15,10 @@
         <div class="songs">
             @foreach($songs as $song)
                 <div class="song">
-                    <img src="{{ asset($song->img_path) }}" alt="{{ $song->name }}">
+                    <img src="{{ asset($song->img_path) }}" alt="{{ $song->name }}"> <!-- image -->
+                    <div class="overlay"> <!-- hover text -->
+                        <p>{{ $song->release_date }}</p> <!-- song release_date -->
+                    </div>
                 </div>
             @endforeach
 
