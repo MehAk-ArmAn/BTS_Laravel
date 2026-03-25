@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 24, 2026 at 05:52 PM
+-- Generation Time: Mar 25, 2026 at 05:49 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -333,8 +333,7 @@ CREATE TABLE `sessions` (
 --
 
 INSERT INTO `sessions` (`id`, `user_id`, `ip_address`, `user_agent`, `payload`, `last_activity`) VALUES
-('7GWGq8S970CR6PVmli4072kuNH4Sf1gUmUslPPWc', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiQUg5WGtya0Fmckc4QUFBTVBFbjZwMDNBcFRzdG14ZWo0dUpUdFk0ciI7czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6Mjc6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9zb25ncyI7czo1OiJyb3V0ZSI7Tjt9czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ==', 1774371066),
-('XjH3bgF72ZSNuNYYGzx2dvEXIRqmpQJbZldszxyN', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiUU9heVNSYzl5RVJDQXl2VFIxb2h6UnZPTkNlWE9sMnRNNzF4VDV4diI7czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6MzI6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9idHNfY29waWVzIjtzOjU6InJvdXRlIjtzOjE2OiJidHNfY29waWVzLmluZGV4Ijt9czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ==', 1771798687);
+('8L4Fjr1E813ODTO2aonC4i1qlWSWZeGD8PK6hneh', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiOGRqQ0NIZm40Tm55R2wxZnhuU1RYUnhCV2VzdDdab0EzMGxrTkFiaiI7czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6Mjc6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9zb25ncyI7czo1OiJyb3V0ZSI7Tjt9czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ==', 1774457070);
 
 -- --------------------------------------------------------
 
@@ -346,6 +345,7 @@ CREATE TABLE `songs_images` (
   `id` bigint(20) UNSIGNED NOT NULL,
   `name` varchar(255) NOT NULL,
   `img_path` varchar(255) NOT NULL,
+  `release_date` date NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -354,9 +354,57 @@ CREATE TABLE `songs_images` (
 -- Dumping data for table `songs_images`
 --
 
-INSERT INTO `songs_images` (`id`, `name`, `img_path`, `created_at`, `updated_at`) VALUES
-(1, 'Dynamite', 'img/songs/dynamite.jpg', NULL, NULL),
-(2, 'Butter', 'imgs/songs/3.jfif', NULL, NULL);
+INSERT INTO `songs_images` (`id`, `name`, `img_path`, `release_date`, `created_at`, `updated_at`) VALUES
+(1, 'WINGS', 'imgs/songs/34.jfif', '2016-10-10', NULL, NULL),
+(2, 'BUTTER', 'imgs/songs/3.jfif', '2021-05-21', NULL, NULL),
+(4, 'DNA', 'imgs/songs/4.jfif', '2017-09-18', NULL, NULL),
+(5, '3D', 'imgs/songs/2.jfif', '2023-09-29', NULL, NULL),
+(6, 'Skool Luv Affair', 'imgs/songs/1.jfif', '2014-02-12', NULL, NULL),
+(7, 'RUN', 'imgs/songs/5.jfif', '2015-11-30', NULL, NULL),
+(8, 'NO MORE DREAM', 'imgs/songs/6.jfif', '2013-06-12', NULL, NULL),
+(9, 'BUTTERFLY', 'imgs/songs/7.jfif', '2015-04-29', NULL, NULL),
+(10, 'DARK&WILD', 'imgs/songs/8.jfif', '2014-08-19', NULL, NULL),
+(11, 'LIE', 'imgs/songs/9.jfif', '2016-10-10', NULL, NULL),
+(12, 'MAKE IT RIGHT', 'imgs/songs/10.jfif', '2019-04-12', NULL, NULL),
+(13, 'INTRO: SERENDIPITY', 'imgs/songs/11.jfif', '2017-09-18', NULL, NULL),
+(14, 'BTS WORLD OST', 'imgs/songs/12.jfif', '2019-06-28', NULL, NULL),
+(15, 'THE MOST BEAUTIFUL MOMENT IN LIFE: YOUNG FOREVER', 'imgs/songs/13.jfif', '2016-05-02', NULL, NULL),
+(16, 'BLACK SWAN', 'imgs/songs/14.jfif', '2020-01-17', NULL, NULL),
+(17, 'LOVE YOURSELF: TEAR', 'imgs/songs/15.jfif', '2018-05-18', NULL, NULL),
+(18, 'LOVE YOURSELF: ANSWER', 'imgs/songs/16.jfif', '2018-08-24', NULL, NULL),
+(19, '2 COOL 4 SKOOL', 'imgs/songs/17.jfif', '2013-06-12', NULL, NULL),
+(20, 'FAKE LOVE', 'imgs/songs/18.jfif', '2018-05-18', NULL, NULL),
+(21, 'DAECHWITA', 'imgs/songs/19.jfif', '2020-05-22', NULL, NULL),
+(22, 'EUPHORIA', 'imgs/songs/20.jfif', '2018-08-24', NULL, NULL),
+(23, 'MAGIC SHOP', 'imgs/songs/21.jfif', '2018-05-18', NULL, NULL),
+(24, 'PERMISSION TO DANCE', 'imgs/songs/22.jfif', '2021-07-09', NULL, NULL),
+(25, 'IDOL', 'imgs/songs/23.jfif', '2018-08-24', NULL, NULL),
+(26, 'MIKROKOSMOS', 'imgs/songs/24.jfif', '2019-04-12', NULL, NULL),
+(27, 'FIRE', 'imgs/songs/25.jfif', '2016-05-02', NULL, NULL),
+(28, 'TRIVIA: SEESAW', 'imgs/songs/26.jfif', '2018-08-24', NULL, NULL),
+(29, 'DOPE', 'imgs/songs/27.jfif', '2015-06-23', NULL, NULL),
+(30, 'BLOOD SWEAT & TEARS', 'imgs/songs/28.jfif', '2016-10-10', NULL, NULL),
+(31, 'DREAMERS', 'imgs/songs/29.jfif', '2022-11-20', NULL, NULL),
+(32, 'FACE YOURSELF', 'imgs/songs/30.jfif', '2018-04-04', NULL, NULL),
+(33, 'HAEGEUM', 'imgs/songs/31.jfif', '2023-04-21', NULL, NULL),
+(34, 'MIC DROP', 'imgs/songs/32.jfif', '2017-11-24', NULL, NULL),
+(35, 'AMYGDALA', 'imgs/songs/33.jfif', '2023-04-21', NULL, NULL),
+(36, '...', 'imgs/songs/35.jfif', '0000-00-00', NULL, NULL),
+(37, 'RUN BTS', 'imgs/songs/36.jfif', '2022-06-10', NULL, NULL),
+(38, 'MAP OF THE SOUL: PERSONA', 'imgs/songs/37.jfif', '2019-04-12', NULL, NULL),
+(39, '...', 'imgs/songs/38.jfif', '0000-00-00', NULL, NULL),
+(40, '...', 'imgs/songs/39.jfif', '0000-00-00', NULL, NULL),
+(41, 'SAVE ME', 'imgs/songs/40.jfif', '2016-05-02', NULL, NULL),
+(42, 'SEVEN', 'imgs/songs/41.jfif', '2023-07-14', NULL, NULL),
+(43, '...', 'imgs/songs/42.jfif', '0000-00-00', NULL, NULL),
+(44, 'STANDING NEXT TO YOU', 'imgs/songs/43.jfif', '2023-11-03', NULL, NULL),
+(45, 'THE TRUTH UNTOLD', 'imgs/songs/44.jfif', '2018-05-18', NULL, NULL),
+(46, 'WAKE UP', 'imgs/songs/45.jfif', '2014-12-24', NULL, NULL),
+(47, 'WAR OF HORMONE', 'imgs/songs/46.jfif', '2014-08-19', NULL, NULL),
+(48, 'YOU NEVER WALK ALONE', 'imgs/songs/47.jfif', '2017-02-13', NULL, NULL),
+(49, '00:00', 'imgs/songs/48.jfif', '2020-02-21', NULL, NULL),
+(50, 'I NEED YOU', 'imgs/songs/49.jfif', '2015-04-29', NULL, NULL),
+(51, 'BLUE SIDE', 'imgs/songs/50.jfif', '2021-03-02', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -475,7 +523,7 @@ ALTER TABLE `quotes`
 -- AUTO_INCREMENT for table `songs_images`
 --
 ALTER TABLE `songs_images`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=53;
 
 --
 -- AUTO_INCREMENT for table `users`
