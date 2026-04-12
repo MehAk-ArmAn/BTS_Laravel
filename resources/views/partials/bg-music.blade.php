@@ -1,25 +1,23 @@
-// the background music partial for ALL the pages
-        View::share('bgMusic', view('partials.bg-music'));
-
-        
-
-        <!-- Background Music -->
-        {!! $bgMusic !!}
-
-<div>
-    <p>m</p>
-    <p>e</p>
-    <p>h</p>
-    <p>a</p>
-    <p>k</p>
-</div>
+{{--
+    OPTIONAL BACKGROUND MUSIC PARTIAL
+    =================================
+    NOTES:
+    - Not required for navbar/footer fix
+    - Keeping your code structure
+    - Removed random broken non-HTML notes from render output
+    - If you want it globally, include it in layout
+--}}
 
 <audio id="bgMusic" autoplay loop>
     <source src="{{ asset('music/background.mp3') }}" type="audio/mpeg">
 </audio>
-<!-- <script>
+
+{{--
+<script>
     const music = document.getElementById('bgMusic');
+
     document.addEventListener('click', () => {
-        if(music.paused) music.play();
+        if (music.paused) music.play();
     }, { once: true });
-</script> -->
+</script>
+--}}

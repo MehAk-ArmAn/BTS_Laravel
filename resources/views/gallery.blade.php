@@ -1,28 +1,27 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-        <title>⋆✦✧⋆ BTS Meme Gallery ⋆✦✧⋆</title>
-        <link rel="stylesheet" href="{{ asset('css/gallery.css') }}">
-        <link rel="shortcut icon" href="{{ asset('favicons/logo.png') }}" type="image/x-icon">
-    </head>
-    <body>
+{{--
+    GALLERY PAGE
+    ============
+    FIX:
+    - Uses layout
+    - Same loop / same css / same output
+--}}
 
-            <!-- Navbar -->
-        @include('partials.navbar')
-        
-        <h1>BTS Meme Gallery 💜😂</h1>
-        <div class="gallery">
-            @foreach($pics as $pic)
-                <div class="pic">
-                    <img src="{{ asset($pic->img_path) }}" alt="{{ $pic->name }}">
-                </div>
-            @endforeach
+@extends('layouts.app')
 
-        </div>
+@section('title', '⋆✦✧⋆ BTS Meme Gallery ⋆✦✧⋆')
 
-        <!-- Footer -->
-        @include('partials.footer')
-        
-    </body>
-</html>
+@push('styles')
+    <link rel="stylesheet" href="{{ asset('css/gallery.css') }}">
+@endpush
+
+@section('content')
+    <h1>BTS Meme Gallery 💜😂</h1>
+
+    <div class="gallery">
+        @foreach($pics as $pic)
+            <div class="pic">
+                <img src="{{ asset($pic->img_path) }}" alt="{{ $pic->name }}">
+            </div>
+        @endforeach
+    </div>
+@endsection

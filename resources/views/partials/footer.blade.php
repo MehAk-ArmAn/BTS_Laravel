@@ -1,10 +1,16 @@
-<!-- Link CSS -->
-<link rel="stylesheet" href="{{ asset('css/footer.css') }}">
+{{--
+    SHARED FOOTER PARTIAL
+    =====================
+    IMPORTANT FIX:
+    - Removed CSS <link> from inside partial
+    - CSS is now loaded once in layout
+    - This keeps footer styling consistent across all pages
+--}}
 
 <footer class="footer">
     <div class="footer-container">
 
-        <!-- Brand Section -->
+        {{-- Brand section --}}
         <div class="footer-brand">
             <img src="{{ asset('favicons/logo.png') }}" alt="BangTanSonyeondan's Logo" class="footer-logo">
             <p>
@@ -12,7 +18,7 @@
             </p>
         </div>
 
-        <!-- Quick Links -->
+        {{-- Quick links --}}
         <div class="footer-links">
             <h4>Quick Links</h4>
             <ul>
@@ -34,7 +40,7 @@
             </ul>
         </div>
 
-        <!-- Members -->
+        {{-- Members --}}
         <div class="footer-members">
             <h4>Members</h4>
             <ul>
@@ -48,7 +54,7 @@
             </ul>
         </div>
 
-        <!-- Contact -->
+        {{-- Contact --}}
         <div class="footer-contact">
             <h4>Contact</h4>
             <p>Email: {{ $adminEmail }}</p>
@@ -64,6 +70,7 @@
 
     </div>
 
+    {{-- Footer bottom --}}
     <div class="footer-bottom">
         <p>© 2026 BangTanSonyeondan website created by {{ $name }}. All rights reserved.</p>
     </div>

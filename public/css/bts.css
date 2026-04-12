@@ -1,20 +1,25 @@
+/*
+    HOME PAGE CSS
+    =============
+    IMPORTANT FIX:
+    - Removed html/body full-height flex centering
+    - That was fighting shared navbar/footer layout
+    - Style look stays same
+*/
+
 html, body {
-    height: 100%; /* Ensures both html and body span the full height of the viewport */
-    margin: 0;   /* Removes default body margins */
+    margin: 0;
 }
 
-/* Keep your body styles for background and centering */
+/* Keep your background */
 body {
-    display: flex;             /* Enables flexbox layout for the body container */
-    justify-content: center;   /* Centers content horizontally along the main axis */
-    align-items: center;
     background-image: url('../imgs/background.jpeg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 }
 
-/* H1 big text in center stays */
+/* Big center heading stays */
 h1 {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 200px;
@@ -23,5 +28,6 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* fill screen */
+    min-height: calc(100vh - 70px);
+    margin: 0;
 }

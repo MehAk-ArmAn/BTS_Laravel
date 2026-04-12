@@ -1,23 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <!-- Your favicon -->
-    <link rel="shortcut icon" href="{{ asset('favicons/logo.png') }}" type="image/x-icon">
+{{--
+    BT21 PAGE
+    =========
+    FIX:
+    - Uses master layout now
+    - Same CSS
+    - Same content
+--}}
 
-    <!-- Page title -->
-    <title>⋆✦✧⋆ Bt21 ⋆✦✧⋆</title>
+@extends('layouts.app')
 
+@section('title', '⋆✦✧⋆ Bt21 ⋆✦✧⋆')
+
+@push('styles')
     <link rel="stylesheet" href="{{ asset('css/bt21.css') }}">
-</head>
-<body>
+@endpush
 
-        <!-- Navbar -->
-        @include('partials.navbar')
-        
+@section('content')
     <h1>BT21 💜</h1>
-
-    <!-- Footer -->
-        @include('partials.footer')
-</body>
-</html>
+@endsection
 

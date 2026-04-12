@@ -1,37 +1,36 @@
-<!DOCTYPE html>
-<html>
-    <head>
+{{--
+    VOTE PAGE
+    =========
+    FIX:
+    - Uses layout
+    - Keeps form same
+    - Keeps CSRF same
+--}}
 
-        <title>⋆✦✧⋆ Vote ⋆✦✧⋆</title>
-        <link rel="stylesheet" href="{{ asset('css/vote.css') }}">
-        <link rel="shortcut icon" href="{{ asset('favicons/logo.png') }}" type="image/x-icon">  
+@extends('layouts.app')
 
-    </head>
-    <body>
+@section('title', '⋆✦✧⋆ Vote ⋆✦✧⋆')
 
-        <!-- Navbar -->
-        @include('partials.navbar')
-        
-        <h1>Vote for your Bias 💜</h1>
+@push('styles')
+    <link rel="stylesheet" href="{{ asset('css/vote.css') }}">
+@endpush
 
-        <form action="/vote" method="POST">
-            @csrf <!-- security token -->
-<!-- Laravel uses "CSRF" tokens to make sure POST requests come from trusted forms and not external malicious sites. -->
-            <select name="member" class="input" required>
-                <!-- name is used to send this input’s value to the server -->
-                <option value="🎤 Rap Monster">⋆✦✧⋆ {{ $RM }} ⋆✦✧⋆</option>
-                <option value="😼 Suga">⋆✦✧⋆ {{ $Suga }} ⋆✦✧⋆</option>
-                <option value="😀 Jiminaaaa">⋆✦✧⋆ {{ $Jimin }} ⋆✦✧⋆</option>
-                <option value="😎World Wide Handsome Jin">⋆✦✧⋆ {{ $Jin }} ⋆✦✧⋆</option>
-                <option value="🕺🏻 Hobi">⋆✦✧⋆ {{ $JHope }} ⋆✦✧⋆</option>
-                <option value="✌🏻 V">⋆✦✧⋆ {{ $V }} ⋆✦✧⋆</option>
-                <option value="💀 Jk">⋆✦✧⋆ {{ $Jk }} ⋆✦✧⋆</option>
-            </select>
-            <button class="btn" type="submit">Vote 🎉</button> <!-- to submit the vote -->
-        </form>
+@section('content')
+    <h1>Vote for your Bias 💜</h1>
 
-        <!-- Footer -->
-        @include('partials.footer')
-        
-    </body>
-</html>
+    <form action="/vote" method="POST">
+        @csrf
+
+        <select name="member" class="input" required>
+            <option value="🎤 Rap Monster">⋆✦✧⋆ {{ $RM }} ⋆✦✧⋆</option>
+            <option value="😼 Suga">⋆✦✧⋆ {{ $Suga }} ⋆✦✧⋆</option>
+            <option value="😀 Jiminaaaa">⋆✦✧⋆ {{ $Jimin }} ⋆✦✧⋆</option>
+            <option value="😎World Wide Handsome Jin">⋆✦✧⋆ {{ $Jin }} ⋆✦✧⋆</option>
+            <option value="🕺🏻 Hobi">⋆✦✧⋆ {{ $JHope }} ⋆✦✧⋆</option>
+            <option value="✌🏻 V">⋆✦✧⋆ {{ $V }} ⋆✦✧⋆</option>
+            <option value="💀 Jk">⋆✦✧⋆ {{ $Jk }} ⋆✦✧⋆</option>
+        </select>
+
+        <button class="btn" type="submit">Vote 🎉</button>
+    </form>
+@endsection

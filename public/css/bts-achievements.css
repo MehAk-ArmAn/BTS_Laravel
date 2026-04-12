@@ -42,7 +42,7 @@ body {
 /* TIMELINE */
 .timeline-container {
     max-width: 1100px;
-    margin: -100px auto 50px auto; /* overlap hero for style */
+    margin: -100px auto 50px auto;
     padding: 20px;
     position: relative;
 }
@@ -112,7 +112,7 @@ body {
 }
 
 .bts-footer {
-    background: linear-gradient(90deg, #8d2de210, #4a00e010); /* purple gradient vibes */
+    background: linear-gradient(90deg, #8d2de210, #4a00e010);
     color: #fff;
     text-align: center;
     padding: 20px 0;
@@ -120,7 +120,7 @@ body {
     font-weight: bold;
     letter-spacing: 1px;
     box-shadow: 0 -4px 10px rgba(0,0,0,0.3);
-    position: relative; /* sticks at the bottom naturally */
+    position: relative;
     z-index: 100;
     text-shadow: 1px 1px 5px #000;
     transition: all 0.3s ease;
@@ -128,9 +128,8 @@ body {
 
 .bts-footer:hover {
     transform: scale(1.05);
-    background: linear-gradient(90deg, #c300ff20, #3333ff20); /* glow on hover */
+    background: linear-gradient(90deg, #c300ff20, #3333ff20);
 }
-
 
 /* RESPONSIVE */
 @media(max-width: 768px) {
@@ -138,9 +137,11 @@ body {
         flex-direction: column !important;
         text-align: left;
     }
+
     .timeline-date {
         margin-bottom: 10px;
     }
+
     .hero-text h1 {
         font-size: 2rem;
         padding: 20px 30px;

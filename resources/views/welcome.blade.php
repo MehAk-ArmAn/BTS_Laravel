@@ -1,20 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8"> <!-- Supports emojis and all text -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Mobile-friendly -->
-    <title>✧✦⋆✧✦⋆ B T S ⋆✦✧⋆✧✦⋆</title>
+{{--
+    HOME PAGE
+    =========
+    FIX:
+    - Converted from full HTML page to layout-based page
+    - Keeps same CSS
+    - Keeps same content
+    - Fixes shared navbar/footer inconsistency
+--}}
+
+@extends('layouts.app')
+
+@section('title', '✧✦⋆✧✦⋆ B T S ⋆✦✧⋆✧✦⋆')
+
+@push('styles')
+    {{-- Home page CSS --}}
     <link rel="stylesheet" href="{{ asset('css/bts.css') }}">
-    <link rel="shortcut icon" href="{{ asset('imgs/bts-0t7_aesthetic_icon.png') }}" type="image/x-icon">
-</head>
-<body>
+@endpush
 
-        <!-- Navbar -->
-        @include('partials.navbar')
-        
+@section('content')
     <h1>BTS</h1>
-
-    <!-- Footer -->
-        @include('partials.footer')
-</body>
-</html>
+@endsection

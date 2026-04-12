@@ -1,7 +1,12 @@
-<!-- Link CSS -->
-<link rel="stylesheet" href="{{ asset('css/navbar.css') }}">
+{{--
+    SHARED NAVBAR PARTIAL
+    =====================
+    IMPORTANT FIX:
+    - Removed CSS <link> from inside this partial
+    - CSS should be loaded from layout only
+    - Prevents weird differences page to page
+--}}
 
-<!-- Navbar -->
 <nav id="navbar">
     <a href="/">Home</a>
     <a href="/quotes">Quotes</a>
@@ -21,5 +26,5 @@
     <a href="/songs">BTS SONGS</a>
 </nav>
 
-<!-- JS 
+<!-- JS
 <script src="{{ asset('js/bts.js') }}"></script> -->
